@@ -1,4 +1,4 @@
-export default function Statistics({ title, stats }) {
+export default function Statistics({ title = 'no search', stats }) {
   return (
     <div>
       <section className="statistics">
