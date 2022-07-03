@@ -10,7 +10,7 @@ export default function Statistics({ title, stats }) {
   return (
     <div>
       <section className={style.statistics}>
-        {title ? <h2 className={style.title}>{title}</h2> : ''}
+        {title && <h2 className={style.title}>{title}</h2>}
 
         <ul className={style.statList}>
           {stats.map(el => (
