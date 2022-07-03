@@ -1,0 +1,8 @@
+.transactionTable {
+  display: table;
+  width: 800px;
+  margin: 8px;
+
+  border-radius: 8px;
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
