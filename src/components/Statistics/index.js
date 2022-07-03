@@ -19,7 +19,7 @@ export default function Statistics({ title, stats }) {
               key={el.id}
               style={{ backgroundColor: BgcColor() }}
             >
-              <span clasName={style.label}>{el.label}</span>
+              <span className={style.label}>{el.label}</span>
               <span className={style.percentage}>{el.percentage}%</span>
             </li>
           ))}

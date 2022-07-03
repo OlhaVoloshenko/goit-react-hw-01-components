@@ -22,20 +22,31 @@
 }
 
 .item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 80px;  
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 80px;
+  text-align: center;
+
+  border-radius: 10px;
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
 }
 
 .label {
   color: white;
   display: block;
-  padding-bottom: 5px;
-  font-size: 14px;
+  padding-bottom: 8px;
+  font-size: 24px;
   font-weight: 500;
+ 
 }
 
 .percentage {
-  color: white;
+  display: block;
+
   font-weight: 700;
+  font-size: 20px;
+  padding: 8px 0;
+
+  color: white;
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
 }
