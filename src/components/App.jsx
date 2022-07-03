@@ -7,13 +7,13 @@ import FriendList from './FriendList';
 
 export const App = () => {
   return (
-    <div style={{
+    <div /*style={{
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       fontSize: 36,
       color: '#052052'
-    }}
+    }}*/
     >
     <Profile
       username={user.username}

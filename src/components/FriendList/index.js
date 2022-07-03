@@ -1,5 +1,4 @@
-
-export default function Friendlist ({ friends }) {
+export default function Friendlist({ friends }) {
   return (
     <div>
       <ul className="friend-list">
@@ -10,5 +9,5 @@ export default function Friendlist ({ friends }) {
         </li>
       </ul>
     </div>
-  )
-};
+  );
+}
