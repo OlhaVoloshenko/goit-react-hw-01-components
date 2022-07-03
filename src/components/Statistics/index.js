@@ -1,28 +1,40 @@
-export default function Statistics({ title = 'no search', stats }) {
+import propTypes from 'prop-types';
+import style from './Statistics.module.css';
+
+function BgcColor() {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  return '#' + randomColor;
+}
+
+export default function Statistics({ title, stats }) {
   return (
     <div>
-      <section className="statistics">
-        <h2 className="title">Upload stats</h2>
+      <section className={style.statistics}>
+        {title ? <h2 className={style.title}>{title}</h2> : ''}
 
-        <ul className="stat-list">
-          <li className="item">
-            <span clasNames="label">.docx</span>
-            <span className="percentage">4%</span>
-          </li>
-          <li className="item">
-            <span className="label">.mp3</span>
-            <span className="percentage">14%</span>
-          </li>
-          <li className="item">
-            <span className="label">.pdf</span>
-            <span className="percentage">41%</span>
-          </li>
-          <li className="item">
-            <span className="label">.mp4</span>
-            <span className="percentage">12%</span>
-          </li>
+        <ul className={style.statList}>
+          {stats.map(el => (
+            <li
+              className={style.item}
+              key={el.id}
+              style={{ backgroundColor: BgcColor() }}
+            >
+              <span clasName={style.label}>{el.label}</span>
+              <span className={style.percentage}>{el.percentage}%</span>
+            </li>
+          ))}
         </ul>
       </section>
     </div>
-  )
+  );
+}
+
+Statistics.propTypes = {
+  stats: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      label: propTypes.string.isRequired,
+      percentage: propTypes.number.isRequired,
+    })
+  ),
 };

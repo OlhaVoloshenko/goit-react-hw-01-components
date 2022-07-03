@@ -26,7 +26,7 @@ export const App = () => {
         likes={user.stats.likes}
       />
       <Statistics
-        title="title"
+        title="Upload stats"
         stats={data}
       />
       <FriendList
