@@ -1,10 +1,6 @@
 import propTypes from 'prop-types';
 import style from './Statistics.module.css';
-
-function BgcColor() {
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  return '#' + randomColor;
-}
+import BgcColor from '../helpers/BgcColor.js';
 
 export default function Statistics({ title, stats }) {
   return (
