@@ -9,14 +9,14 @@ export default function Statistics({ title, stats }) {
         {title && <h2 className={style.title}>{title}</h2>}
 
         <ul className={style.statList}>
-          {stats.map(el => (
+          {stats.map(({ id, label, percentage }) => (
             <li
               className={style.item}
-              key={el.id}
+              key={id}
               style={{ backgroundColor: BgcColor() }}
             >
-              <span className={style.label}>{el.label}</span>
-              <span className={style.percentage}>{el.percentage}%</span>
+              <span className={style.label}>{label}</span>
+              <span className={style.percentage}>{percentage}%</span>
             </li>
           ))}
         </ul>
